@@ -1,0 +1,6 @@
+apache-airflow
+pandas
+yfinance
+snowflake-connector-python
+statsmodels
+scikit-learn
