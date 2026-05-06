@@ -51,3 +51,40 @@ Stock market analysts often need updated historical and forecasted stock data fo
 - Add email/Slack alerts for failed DAG runs
 - Replace full table refresh with incremental loading
 - Add Power BI dashboard for historical and forecasted trends
+
+
+## Running the Project
+
+### Start Docker Containers
+```bash
+docker compose up
+```
+
+### Stop Docker Containers
+```bash
+docker compose down
+```
+
+### Trigger Airflow DAGs
+
+Run the ETL pipeline:
+```bash
+docker-compose exec airflow airflow dags trigger stock_price_pipeline
+```
+
+Run the forecasting pipeline:
+```bash
+docker-compose exec airflow airflow dags trigger forecast_pipeline
+```
+
+### Access Airflow UI
+Open:
+```text
+http://localhost:8080
+```
+
+Default credentials:
+```text
+Username: airflow
+Password: airflow
+```
