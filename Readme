@@ -40,6 +40,12 @@ Stock market analysts often need updated historical and forecasted stock data fo
 - Standardized date formats before warehouse loading
 - Used duplicate checks to avoid repeated stock records
 
+## Monitoring & Reliability
+- Airflow task retries are configured to handle temporary failures.
+- Logging is used across ingestion, validation, and Snowflake loading steps.
+- DAG status can be monitored through the Airflow UI.
+- Failed tasks can be retried from the Airflow interface.
+
 ## Future Improvements
 - Add MAE/RMSE backtesting for ARIMA forecasts
 - Add email/Slack alerts for failed DAG runs
