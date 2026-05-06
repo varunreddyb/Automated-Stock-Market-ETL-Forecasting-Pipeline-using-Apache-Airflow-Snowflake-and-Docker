@@ -33,3 +33,15 @@ Stock market analysts often need updated historical and forecasted stock data fo
 - 30-day ARIMA forecasting workflow
 - SQL-based analytics layer
 - Scheduled pipeline execution
+
+## Data Quality Checks
+- Validated required columns before loading into Snowflake
+- Checked for null values in stock price and date fields
+- Standardized date formats before warehouse loading
+- Used duplicate checks to avoid repeated stock records
+
+## Future Improvements
+- Add MAE/RMSE backtesting for ARIMA forecasts
+- Add email/Slack alerts for failed DAG runs
+- Replace full table refresh with incremental loading
+- Add Power BI dashboard for historical and forecasted trends
