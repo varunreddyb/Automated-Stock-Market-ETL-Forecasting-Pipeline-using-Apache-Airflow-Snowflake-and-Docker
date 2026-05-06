@@ -1,0 +1,35 @@
+# Automated Stock Market ETL & Forecasting Pipeline using Apache Airflow, Snowflake, and Docker
+
+## Overview
+This project is an end-to-end data engineering pipeline that automates stock market data ingestion, transformation, cloud warehousing, and forecasting. It uses Apache Airflow to orchestrate daily ETL workflows, Snowflake to store structured stock data, Docker for containerized execution, and ARIMA for 30-day stock price forecasting.
+
+## Business Problem
+Stock market analysts often need updated historical and forecasted stock data for decision-making. Manual collection and forecasting can be time-consuming, inconsistent, and difficult to scale. This project automates the workflow so stock data can be collected, stored, forecasted, and queried from a centralized warehouse.
+
+## Tech Stack
+- Python
+- Apache Airflow
+- Snowflake
+- Docker
+- yFinance API
+- Pandas
+- ARIMA
+- SQL
+
+## Pipeline Workflow
+1. Fetch daily stock data for AAPL and GOOGL using yFinance.
+2. Clean and transform the raw stock data using Python and Pandas.
+3. Load structured data into Snowflake using staging and COPY INTO.
+4. Trigger a forecasting DAG using Apache Airflow.
+5. Pull historical closing prices from Snowflake.
+6. Generate 30-day forecasts using ARIMA.
+7. Store forecast results back into Snowflake for SQL-based analysis.
+
+## Key Features
+- Automated stock data ingestion
+- Apache Airflow DAG orchestration
+- Snowflake cloud data warehousing
+- Dockerized local deployment
+- 30-day ARIMA forecasting workflow
+- SQL-based analytics layer
+- Scheduled pipeline execution
